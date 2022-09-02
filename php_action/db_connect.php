@@ -1,8 +1,8 @@
 <?php 	
 
-$localhost = "127.0.0.1";
-$username = "root";
-$password = "";
+$localhost = "localhost";
+$username = "montanna";
+$password = "password";
 $dbname = "stock_db";
 
 // db connection
