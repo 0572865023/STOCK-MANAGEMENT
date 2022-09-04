@@ -6,7 +6,7 @@ require_once 'core.php';
 
 $sql = "SELECT product.product_id, product.product_name, product.product_image, product.brand_id,
  		product.categories_id, product.quantity, product.rate, product.active, product.status, 
- 		brands.brand_name, categories.categories_name FROM product 
+ 		brands.brand_name, categories.categories_name ,product.year,product.model FROM product 
 		INNER JOIN brands ON product.brand_id = brands.brand_id 
 		INNER JOIN categories ON product.categories_id = categories.categories_id  
 		WHERE product.status = 1";
@@ -14,6 +14,8 @@ $sql = "SELECT product.product_id, product.product_name, product.product_image, 
 $result = $connect->query($sql);
 
 $output = array('data' => array());
+
+
 
 if($result->num_rows > 0) { 
 
@@ -62,8 +64,8 @@ if($result->num_rows > 0) {
  		// product name
  		$row[1], 
  		// rate
-		$row[2],
- 		$row[3],
+		$row[11],
+ 		$row[12],
  		
  		$row[6],
  		// quantity 
