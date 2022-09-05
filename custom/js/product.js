@@ -237,6 +237,10 @@ function editProduct(productId = null) {
 				$("#editQuantity").val(response.quantity);
 				// rate
 				$("#editRate").val(response.rate);
+				// year
+				$("#editYear").val(response.year);
+				// rate
+				$("#editModel").val(response.model);
 				// brand name
 				$("#editBrandName").val(response.brand_id);
 				// category name
@@ -252,6 +256,8 @@ function editProduct(productId = null) {
 					var productName = $("#editProductName").val();
 					var quantity = $("#editQuantity").val();
 					var rate = $("#editRate").val();
+					var rate = $("#editYear").val();
+					var rate = $("#editModel").val();
 					var brandName = $("#editBrandName").val();
 					var categoryName = $("#editCategoryName").val();
 					var productStatus = $("#editProductStatus").val();
@@ -286,6 +292,26 @@ function editProduct(productId = null) {
 						// success out for form 
 						$("#editRate").closest('.form-group').addClass('has-success');	  	
 					}	// /else
+
+					if(year == "") {
+						$("#editYear").after('<p class="text-danger">Year field is required</p>');
+						$('#editYear').closest('.form-group').addClass('has-error');
+					}	else {
+						// remov error text field
+						$("#editYear").find('.text-danger').remove();
+						// success out for form 
+						$("#editYear").closest('.form-group').addClass('has-success');	  	
+					}	
+
+					if(model == "") {
+						$("#editModel").after('<p class="text-danger">Model field is required</p>');
+						$('#editModel').closest('.form-group').addClass('has-error');
+					}	else {
+						// remov error text field
+						$("#editModel").find('.text-danger').remove();
+						// success out for form 
+						$("#editModel").closest('.form-group').addClass('has-success');	  	
+					}	
 
 					if(brandName == "") {
 						$("#editBrandName").after('<p class="text-danger">Brand Name field is required</p>');

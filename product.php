@@ -299,6 +299,24 @@
 								</div> <!-- /form-group-->
 
 								<div class="form-group">
+									<label for="editYear" class="col-sm-3 control-label">Year: </label>
+									<label class="col-sm-1 control-label">: </label>
+									<div class="col-sm-8">
+										<input type="text" class="form-control" id="editYear" placeholder="Year"
+											name="editYear" autocomplete="off">
+									</div>
+								</div> <!-- /form-group-->
+
+								<div class="form-group">
+									<label for="editModel" class="col-sm-3 control-label">Model: </label>
+									<label class="col-sm-1 control-label">: </label>
+									<div class="col-sm-8">
+										<input type="text" class="form-control" id="editModel" placeholder="Model"
+											name="editModel" autocomplete="off">
+									</div>
+								</div> <!-- /form-group-->
+
+								<div class="form-group">
 									<label for="editBrandName" class="col-sm-3 control-label">Brand Name: </label>
 									<label class="col-sm-1 control-label">: </label>
 									<div class="col-sm-8">
